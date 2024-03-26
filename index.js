@@ -15,7 +15,7 @@ const questions = [
     // creates the title for the README
     {
         type: 'input',
-        name: 'fileName',
+        name: 'title',
         message: "Enter Title of your Project",
         validate: validateInput,
     },
@@ -40,6 +40,42 @@ const questions = [
         message: "Enter a description on how to use software/program",
         validate: validateInput,
     },
+    // License choice
+    {
+        type: "list",
+        name: "license",
+        message: "Choose the license you are using",
+        choices: [
+            "GNU AGPLv3",
+            "GNU GPLv3",
+            "GNU LGPLv3",
+            "Apache 2.0",
+            "Boost Software 1.0",
+            "MIT",
+            "Mozilla",
+            "none",
+        ],
+        // probably not needed since user probably cannot leave blank
+        validate: validateInput,
+    },
+    {
+        type: "input",
+        name: "Contribution",
+        message: "Enter any users who cotributed to project",
+        validate: validateInput,
+    },
+    {
+        type: "input",
+        name: "Test",
+        message: "Enter any tests",
+        validate: validateInput,
+    },
+    {
+        type: "input",
+        name: "Questions",
+        message: "Enter how users can handle any questions",
+        validate: validateInput,
+    },
     // Will Create the user GitHub Link for the README
     {
         type: "input",
@@ -62,6 +98,7 @@ function writeToFile(fileName, data) {
         if (err) {
             return console.log(err);
         }
+        console.log("Successfully created the README.md file!");
     });
 }
 
