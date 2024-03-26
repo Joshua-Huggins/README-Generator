@@ -15,4 +15,4 @@ created README.md file for use.
 
 ## Example 
 
-![Generator Example](.Assets/READMEGeneratornodeapp.mp4)
+![Generator Example](https://github.com/Joshua-Huggins/README-Generator/blob/main/Assets/READMEGeneratornodeapp.mp4)
