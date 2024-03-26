@@ -1,5 +1,5 @@
 
-  # Blah
+  # README Generator
 
   ## Contents
 
@@ -15,38 +15,38 @@
 
   ## Description
 
-  blah
+  A node application that helps the user create a README.md file through the use of prompts
 
   ## Installation
 
-  blah
+  You can find the repo in a link below. You will just need to download the repo
 
   ## Usage
 
-  blah
+  After downloading the repo users will then find the application on their terminal and run node index.js to start the application
 
 
   ## License
 
-  ![badge](https://img.shields.io/badge/license-GNU AGPLv3)
+  ![badge](https://img.shields.io/badge/license-none)
 
-  This applications is covered by GNU AGPLv3 license.
+  This applications is covered by none license.
 
   ## Contributors
 
-  Contributors: blah
+  Contributors: none
 
   ## Tests
 
-  blah
+  no tests are included in this project
 
   ## Questions
 
-  blah
+  if you have any questions feel free to contact me using the info below.
 
   ## Example
 
   ## Contact
-  * GitHub Username: blah
-  * E=mail address: blah
+  * GitHub Username: https://github.com/Joshua-Huggins
+  * E=mail address: joshua.huggins@sbcglobal.net
 
