@@ -3,6 +3,13 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
+function validateInput(value) {
+    if(value != "") {
+        return true;
+    } else {
+        return "Please enter a valid input";
+    }
+}
 // TODO: Create an array of questions for user input
 const questions = [
     // creates the title for the README
@@ -10,40 +17,46 @@ const questions = [
         type: 'input',
         name: 'fileName',
         message: "Enter Title of your Project",
+        validate: validateInput,
     },
     // Will create the description for the README
     {
         type: "input",
         name: "description",
         message: "Enter a description of the project",
+        validate: validateInput,
     },
     // Will create the installations section for the README
     {
         type: "input",
         name: "Installation",
         message: "Enter an explanation detailing how to install the software, or enter commands for the program",
+        validate: validateInput,
     },
     // Will create the Usage section for the README
     {
         type: "input",
         name: "Usage",
         message: "Enter a description on how to use software/program",
+        validate: validateInput,
     },
     // Will Create the user GitHub Link for the README
     {
         type: "input",
-        name: "GitHub-UserName",
+        name: "GitHubUserName",
         message: "Enter your GitHub username(enter url)?",
+        validate: validateInput,
     },
     // Will have a link to user email
     {
         type: "input",
-        name: "e-mail",
+        name: "email",
         message: "Enter your e-mail address",
-    }
+        validate: validateInput,
+    },
 ];
 
-// TODO: Create a function to write README file
+// function to generate the ReadMe here
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateMarkdown(data), function (err) {
         if (err) {
@@ -52,13 +65,14 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions).then(data); {
-        console.log(JSON.stringify(data, null, ''));
-        writeToFile("./README/README.md")
-    }
-};
 
-// Function call to initialize app
+// function to initalize the beginning of the questions 
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        console.log(JSON.stringify(data, null, " "));
+        writeToFile("./README/README.md", data);
+    });
+}
+
+// call the function to initalize the beginning of the questions 
 init();

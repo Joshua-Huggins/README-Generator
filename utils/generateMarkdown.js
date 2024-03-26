@@ -30,7 +30,7 @@ function generateMarkdown(data) {
 
   ## Installation
 
-  ${data.Installatio}
+  ${data.Installation}
 
   ## Usage
 
@@ -39,8 +39,8 @@ function generateMarkdown(data) {
   ## Example
 
   ## Contact
-  * GitHub Username: ${data.GitHub-UserName}
-  * E=mail address: ${data.e-mail}
+  * GitHub Username: ${data.GitHubUserName}
+  * E=mail address: ${data.email}
 
 `;
 }
