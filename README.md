@@ -15,4 +15,4 @@ created README.md file for use.
 
 ## Example 
 
-![Generator Example](.Assets/READMEGeneratornodeapp.gif)
+![GIF README Generator](./Assets/READMEGeneratornodeapp.gif)
