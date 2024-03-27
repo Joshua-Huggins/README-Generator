@@ -16,3 +16,5 @@ created README.md file for use.
 ## Example 
 
 ![GIF README Generator](./Assets/READMEGeneratornodeapp.gif)
+
+for a video version of the GIF: https://www.youtube.com/watch?v=lTULlqqen8o
